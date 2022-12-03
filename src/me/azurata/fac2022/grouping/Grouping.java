@@ -13,11 +13,9 @@ import java.util.Map;
  *
  */
 public class Grouping {
+	private final static int STUDENT_COUNT = Arrays.asList(Course.values()).stream().mapToInt(c -> c.getMax()).sum();
 	static final int SUBJECTS_NUMBER = 13;
-
 	private static Map<String, List<Student>> grouped;
-
-	private static int STUDENT_COUNT = Arrays.asList(Course.values()).stream().mapToInt(c -> c.getMax()).sum();
 
 	public static void main(String args[]) {
 		List<Student> students = new ArrayList<>();
@@ -64,5 +62,4 @@ public class Grouping {
 			System.out.println(c.toString() + " students' GP average: " + average);
 		}
 	}
-
 }

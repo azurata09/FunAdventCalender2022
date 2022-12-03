@@ -102,6 +102,4 @@ public class Student implements Comparable<Student> {
 		// Failed only "that" 
 		return -1;
 	}
-
-
 }
