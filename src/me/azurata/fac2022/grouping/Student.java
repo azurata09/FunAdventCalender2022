@@ -81,7 +81,8 @@ public class Student implements Comparable<Student> {
 	}
 
 	public String toString() {
-		return "Student@" + hashCode() + ";" + getScoreSum();
+//		return "Student@" + hashCode() + ";" + getScoreSum();
+		return "" + getScoreSum();
 	}
 
 	@Override
