@@ -82,7 +82,12 @@ public class Student implements Comparable<Student> {
 
 	public String toString() {
 //		return "Student@" + hashCode() + ";" + getScoreSum();
-		return "" + getScoreSum();
+		String str = "";
+		for(Grade g : grades) {
+			str += g.toString();
+		}
+		return str + ":" + getScoreSum();
+		
 	}
 
 	@Override
@@ -97,10 +102,10 @@ public class Student implements Comparable<Student> {
 
 		// Failed only "this"
 		if(this.hasFailed()) {
-			return 1;
+			return -1;
 		}
 
 		// Failed only "that" 
-		return -1;
+		return 1;
 	}
 }
